@@ -6,8 +6,8 @@
 
 body{
 @include background;
-background: $mian-color;
- color:rgb(63, 0, 0) ;
+background: set-text-color($mian-color);
+ color: set-text-color($mian-color);
  height: 100%;
  margin: 0;
  font-family: Arial, Helvetica, sans-serif;
@@ -72,5 +72,44 @@ main{
         }
     }
 }
+.about-info{
 
+display: grid;
+grid-gap:  30px; ;
+grid-template-areas: 'bioImage bio bio'
+'job-1 job-2 job-3';
+grid-template-columns: repeat(3,1fr);
 
+}
+
+.bioImage{
+    grid-area: bioImage;
+    margin: auto;
+    border-radius: 50%;
+    border:$secondary-color  2px solid;
+}
+.bio{
+    grid-area: bio;
+    font-size: 1.5rem;
+}
+.job-1{
+    grid-area:job-1 ;
+}
+.job-2{
+    grid-area:job-2 ;
+}
+.job-3{
+    grid-area:job-3 ;
+}
+.job{
+background: lighten($mian-color, 5);
+padding: 0.5rem;
+border-bottom: $secondary-color 5px solid ;
+}
+footer{
+    background: darken($mian-color,10);
+    padding: 1rem;
+    text-align: center;
+    color: set-text-color($mian-color);
+    height: 100px;
+}

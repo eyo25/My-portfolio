@@ -10,7 +10,7 @@ cursor: pointer;
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background:set-text-color($mian-color);
     @include easeOut;
 }
 //rotate the menu 
@@ -93,7 +93,7 @@ cursor: pointer;
     text-transform: uppercase;
     padding: 1rem,0;
     font-weight: 300;
-    color: #fff;
+    color: set-text-color($mian-color);
     text-decoration: none;
     @include easeOut;
     &:hover{
